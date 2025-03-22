@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class SumOddEven {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the size of the list: ");
+        int size = scanner.nextInt();
+
+        int[] list = new int[size];
+        int sumEven = 0, sumOdd = 0;
+        System.out.println("Enter elements of the list:");
+        for (int i = 0; i < size; i++) {
+            list[i] = scanner.nextInt();
+            if (list[i] % 2 == 0) {
+                sumEven += list[i];
+            } else {
+                sumOdd += list[i];
+            }
+        }
+        System.out.println("Sum of even numbers: " + sumEven);
+        System.out.println("Sum of odd numbers: " + sumOdd);
+
+        scanner.close();
+    }
+}

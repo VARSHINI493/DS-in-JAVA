@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class NthElement {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] list = {10, 20, 30, 40, 50};
+        System.out.print("Enter the position (N) to retrieve: ");
+        int n = scanner.nextInt();
+        if (n > 0 && n <= list.length) {
+            System.out.println("The " + n + "th element is: " + list[n - 1]);
+        } else {
+            System.out.println("Invalid position! Please enter a number between 1 and " + list.length);
+        }
+        scanner.close();
+    }
+}

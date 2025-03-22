@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class AlternateElements {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the size of the list: ");
+        int size = scanner.nextInt();
+
+        int[] list = new int[size];
+
+        System.out.println("Enter elements of the list:");
+        for (int i = 0; i < size; i++) {
+            list[i] = scanner.nextInt();
+        }
+        System.out.print("Alternate elements: ");
+        for (int i = 0; i < size; i += 2) { 
+            System.out.print(list[i] + " ");
+        }
+
+        scanner.close();
+    }
+}

@@ -1,0 +1,28 @@
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class CheckDuplicates {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter elements of the list (space-separated): ");
+        String input = scanner.nextLine();
+        String[] elements = input.split(" ");
+
+        HashSet<Integer> set = new HashSet<>();
+        boolean hasDuplicate = false;
+        for (String element : elements) {
+            int num = Integer.parseInt(element);
+            if (!set.add(num)) { 
+                hasDuplicate = true;
+                break; 
+            }
+        }
+
+        if (hasDuplicate) {
+            System.out.println("The list contains duplicates.");
+        } else {
+            System.out.println("The list does not contain duplicates.");
+        }
+        scanner.close();
+    }
+}
